@@ -45,7 +45,7 @@ System.out.println(largestNumber(nums));
     // all zero cases
     if(str[0].equals("0")){
         return "0";
-        // Exactly. 👍 After the custom sorting, "0" can only be at str[0] when all the elements are zero.
+        // 
     }
     // build the final String
     StringBuilder sb= new StringBuilder();
