@@ -2,7 +2,7 @@ package linkedList;
 
 public class linkedlistCustom {
 
-    private Node head;
+    private Node head; // at first it is null
     private Node tail;
     private int size;
     public linkedlistCustom(){ // this is a constructor
@@ -11,7 +11,7 @@ public class linkedlistCustom {
 
     public void insertFirst(int val){
         Node node= new Node(val);
-        node.next= head;
+        node.next= head; // links the new node to the first node or null
         head= node;
 
         if(tail== null){
