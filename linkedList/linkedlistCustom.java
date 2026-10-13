@@ -122,6 +122,25 @@ public class linkedlistCustom {
 
    }
 
+
+   // insert using recursion
+
+   public void insertrec(int val, int index){
+    head = insertRec(val, index,head);
+    /*  For index > 0, it technically works without capturing it because head just ends up re-pointing to itself. But to support inserting at the very beginning, you must catch that returned node and update head.*/ 
+    
+   }
+
+   private Node insertRec(int val, int index, Node node){
+    if(index ==0){
+        Node temp= new Node(val, node);
+        size++;
+        return temp;
+    }
+
+    node.next= insertRec(val, index-1, node.next);
+   }
+
     private class Node{
         private int value;
         private Node next;
