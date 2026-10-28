@@ -150,6 +150,40 @@ public class linkedlistCustom {
         this.value=value;
 
     }
+
+
+
+    // reversiong a Linklist by using recursion
+    private void reverse(Node node){
+        if(node == tail){
+            head= tail;
+            return;
+        }
+
+        reverse(node.next);
+        tail.next= node;
+        tail=node;
+        tail.next= null;
+    }
+
+    // inplace reversing of a linked list.
+    public void reverseInplace(){
+        if(size < 2){
+            return;
+        }
+        Node prev= null;
+        Node present= head;
+        Node next= present.next;
+        while(present != null){
+            present.next= prev;
+            prev= presnt;
+            present= next;
+            if(next != null){
+                next= next.next;
+            }
+        }
+        head= prev; 
+    }
     public Node(int value, Node next){
         this.value=value;
         this.next=next;
